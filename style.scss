@@ -1,0 +1,176 @@
+$black: #000000;
+$white: #FFFFFF;
+$blue: #75B7BF;
+$brown: #7D7B6A;
+$lightbrown: #f3f3f3;
+
+@mixin rounded-corners($radius: 5px) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+};
+
+@mixin box-shadow($x: 4px, $y: 4px, $spread: 4px, $color: #ccc) {
+    box-shadow: $x $y $spread $color;
+    -moz-box-shadow: $x $y $spread $color;
+    -webkit-box-shadow: $x $y $spread $color;
+};
+
+html, body {
+    font-family: 'Molengo', 'Gill Sans', Helvetica, serif;
+    background: $lightbrown url('bg.gif');
+    color: $black;
+    height: 100%;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+header, footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 25px;
+    font-size: 17px;
+    color: $white;
+    background-color: $brown;
+    
+    ul {
+
+        li {
+            padding: 0px 8px 2px 8px;
+            border-left: 1px solid $white;
+            display: inline;
+            margin-left: -4px;
+            
+            a {
+                cursor: pointer;
+                color: $white;
+                text-decoration: none;
+            }
+            
+        }
+    }
+}
+
+header {
+    top: 0;
+    border-bottom: 4px solid $blue;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+    height: 20px;
+    border-top: 4px solid $blue;
+}
+
+#col1, #aside, #menu {
+    font-family: 'Cardo', Georgia, serif;
+    line-height: 26px;
+    font-size: 20px;
+    float: left;
+}
+
+#col1, #menu {
+    margin: 75px 20px 20px 100px;
+    width: 500px;
+}
+
+#col1 section, #menu {
+    padding: 20px;
+    border: 1px solid $brown;
+}
+
+#col1 section, aside {
+    background: $white;
+}
+
+#aside {
+    background: transparent;
+    margin: 75px 20px 20px;
+    border: 0px;
+    padding: 0px;
+    float: left;
+}
+
+aside, #logo {
+    width: 300px;
+}
+
+#logo, section#maintext {
+    background: transparent;
+    border: 0px;
+    padding: 10px 10px;
+    margin-bottom: 75px;
+    text-align: right;
+    height: 300px; 
+    
+    img {
+        margin: -20px 0 0 0;
+    }
+}
+
+section#calendar, aside#facebook, #menu {
+    @include box-shadow(4px, 4px, 4px, rgba(0, 0, 0, 0.1));
+}
+
+section#calendar {
+    padding: 0;
+}
+
+#menu {
+    clear: left;
+    width: 576px;
+    padding: 0;
+    margin-top: 100px;
+}
+
+iframe {
+    border: 0px;
+    outline: none;
+}
+
+//holdmyticket styles
+.event_wrap {
+    border-top: 1px solid $brown;
+    padding: 10px;
+    
+    .date_l, .date_r {
+        margin-right: 5px;
+        background: $lightbrown;
+        padding: 5px;
+        width: 45px;
+        @include rounded-corners();
+    }
+    
+    .date_r {
+        margin-right: 10px;
+    }
+    
+    .date_l, .date_r, .date1, .date3 {
+        float: left;
+    }
+    
+    .buttons {
+        text-align: right;
+    }
+    
+    .eventPageBtn {
+        font-size: .8em;
+    }
+}
+.event_wrap:first-child {
+    border: 0px;
+}
+
+section a, span.link {
+    text-decoration: none;
+    color: $blue;
+    border-bottom: 1px solid $blue;
+    cursor: pointer;
+}

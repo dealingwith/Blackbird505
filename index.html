@@ -1,0 +1,66 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.1/build/reset/reset-min.css" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript" charset="utf-8">
+    jQuery(document).ready(function(){
+      jQuery(".menulink").click(function(){
+         goToByScroll('menu');
+      });
+      jQuery(".calendarlink").click(function(){
+         goToByScroll('calendar');
+      });
+      
+    });
+    function goToByScroll(id) {
+      jQuery('html,body').animate({scrollTop: jQuery("#"+id).offset().top - 50},'slow');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <ul>
+      <li><a href="http://www.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=blackbird+buvette&sll=37.857507,-95.712891&sspn=36.647398,83.583984&ie=UTF8&ll=35.097018,-106.653214&spn=0.07823,0.16325&z=13&iwloc=A">509 Central NW</a></li>
+      <li>505-243-0878</li>
+      <li class="menulink"><a>Menu</a></li>
+      <li class="calendarlink"><a>Calendar</a></li>
+      <li><a href="mailto:blackbirdbuvette@gmail.com">email</a></li>
+      <li><a href="http://twitter.com/#!/Blackbird505">Twitter</a></li>
+      <li><a href="https://www.facebook.com/BlackbirdBuvette">Facebook</a></li>
+    </ul>
+  </header>
+  <div id="col1">
+    <section id="maintext">
+      <p>&ldquo;Socialising with alcohol is fun and we should not pretend otherwise.&rdquo; &mdash;Suzy Dean
+      <p>A micro club with lots of entertainment and fun. Check out our <span class="calendarlink link">Calendar</span> and <span class="menulink link">Menu</span>.</p>
+    </section>
+    <section id="calendar">
+      <script type="text/javascript" src="http://holdmyticket.com/feeds/feed2.php?apikey=icop23yi1xx7eupx90&venues=122&tplFile=hardrock"></script>
+    </section>
+  </div>
+  <div id="aside">
+    <aside id="logo">
+      <img src="BlackbirdLogoNew.png" alt="">
+    </aside>
+    <aside id="facebook">
+      <iframe id="f3b931f924" name="f33d4ca644" scrolling="no" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: 0; border-color: transparent; overflow-x: hidden; overflow-y: hidden; height: 590px; width: 300px; padding: 0px" class="fb_ltr" src="http://www.facebook.com/plugins/likebox.php?channel=http%3A%2F%2Fstatic.ak.fbcdn.net%2Fconnect%2Fxd_proxy.php%3Fa%3Da%23cb%3Df2468cf29%26origin%3Dhttp%253A%252F%252Fblackbirdbuvette.com%252Ff39cf474d8%26relation%3Dparent.parent%26transport%3Dpostmessage&amp;colorscheme=light&amp;header=false&amp;height=590&amp;href=http%3A%2F%2Fwww.facebook.com%2Fblackbirdbuvette&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=300"></iframe>
+    </aside>
+  </div>
+  <section id="menu">
+    <img src="BlackbirdMenu2010-1.png">
+  </section>
+  <footer>
+      <ul>
+        <li>Mon&#x2192;Fri 11am&#x2192;2am</li>
+        <li>Sat 12pm&#x2192;2am</li>
+        <li>Sun 12pm&#x2192;12am</li>
+        <li>Kitchen Hours Sun&#x2192;Thur until 10pm, Fri&#x2192;Sat until Midnight</li>
+        <li>Free Wi-Fi</li>
+      </ul>
+  </footer>
+</body>
+</html>
