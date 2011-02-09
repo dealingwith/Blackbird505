@@ -72,10 +72,14 @@ footer {
     border-top: 4px solid $blue;
 }
 
-#col1, #aside, #menu {
+div {
     font-family: 'Cardo', Georgia, serif;
     line-height: 26px;
     font-size: 20px;
+    background: transparent;
+}
+
+#col1, #aside, #menu {
     float: left;
 }
 
@@ -84,58 +88,43 @@ footer {
     width: 500px;
 }
 
-#col1 section, #menu {
-    padding: 20px;
-    border: 1px solid $brown;
-}
-
-#col1 section, aside {
-    background: $white;
-}
-
-#aside {
-    background: transparent;
-    margin: 75px 20px 20px;
-    border: 0px;
-    padding: 0px;
-    float: left;
-}
-
-aside, #logo {
-    width: 300px;
-}
-
-#logo, section#maintext {
-    background: transparent;
-    border: 0px;
-    padding: 10px 10px;
-    margin-bottom: 75px;
-    text-align: right;
-    height: 300px; 
-    
+#logo {
     img {
         margin: -20px 0 0 0;
     }
 }
-
-section#calendar, aside#facebook, #menu {
-    @include box-shadow(4px, 4px, 4px, rgba(0, 0, 0, 0.1));
+#aside {
+    margin: 75px 20px 20px;
+    border: 0px;
 }
-
-section#calendar {
-    padding: 0;
-}
-
 #menu {
     clear: left;
     width: 576px;
     padding: 0;
     margin-top: 100px;
 }
-
-iframe {
+#calendar, #menu {
+    padding: 20px;
+    border: 1px solid $brown;
+}
+.box {
+    background: $white;
+    @include box-shadow(4px, 4px, 4px, rgba(0, 0, 0, 0.1));
+}
+#aside div {
+    width: 300px;
     border: 0px;
-    outline: none;
+}
+#maintext, #logo {
+    background: transparent;
+    border: 0px;
+    padding: 10px 10px;
+    margin-bottom: 75px;
+    text-align: right;
+    height: 300px; 
+}
+#calendar, #facebook {
+    padding: 0px;
 }
 
 //holdmyticket styles
@@ -177,7 +166,7 @@ iframe {
     border: 0px;
 }
 
-section a, span.link {
+div a, span.link {
     text-decoration: none;
     color: $blue;
     border-bottom: 1px solid $blue;

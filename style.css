@@ -40,50 +40,25 @@ footer {
   height: 20px;
   border-top: 4px solid #75b7bf; }
 
-#col1, #aside, #menu {
+div {
   font-family: 'Cardo', Georgia, serif;
   line-height: 26px;
   font-size: 20px;
+  background: transparent; }
+
+#col1, #aside, #menu {
   float: left; }
 
 #col1, #menu {
   margin: 75px 20px 20px 100px;
   width: 500px; }
 
-#col1 section, #menu {
-  padding: 20px;
-  border: 1px solid #7d7b6a; }
-
-#col1 section, aside {
-  background: white; }
+#logo img {
+  margin: -20px 0 0 0; }
 
 #aside {
-  background: transparent;
   margin: 75px 20px 20px;
-  border: 0px;
-  padding: 0px;
-  float: left; }
-
-aside, #logo {
-  width: 300px; }
-
-#logo, section#maintext {
-  background: transparent;
-  border: 0px;
-  padding: 10px 10px;
-  margin-bottom: 75px;
-  text-align: right;
-  height: 300px; }
-  #logo img, section#maintext img {
-    margin: -20px 0 0 0; }
-
-section#calendar, aside#facebook, #menu {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); }
-
-section#calendar {
-  padding: 0; }
+  border: 0px; }
 
 #menu {
   clear: left;
@@ -91,9 +66,30 @@ section#calendar {
   padding: 0;
   margin-top: 100px; }
 
-iframe {
+#calendar, #menu {
+  padding: 20px;
+  border: 1px solid #7d7b6a; }
+
+.box {
+  background: white;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); }
+
+#aside div {
+  width: 300px;
+  border: 0px; }
+
+#maintext, #logo {
+  background: transparent;
   border: 0px;
-  outline: none; }
+  padding: 10px 10px;
+  margin-bottom: 75px;
+  text-align: right;
+  height: 300px; }
+
+#calendar, #facebook {
+  padding: 0px; }
 
 .event_wrap {
   border-top: 1px solid #7d7b6a;
@@ -122,7 +118,7 @@ iframe {
 .event_wrap:first-child {
   border: 0px; }
 
-section a, span.link {
+div a, span.link {
   text-decoration: none;
   color: #75b7bf;
   border-bottom: 1px solid #75b7bf;
