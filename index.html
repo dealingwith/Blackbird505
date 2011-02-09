@@ -7,19 +7,22 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 
   <script type="text/javascript" charset="utf-8">
-    jQuery(document).ready(function(){
+    // jQuery.noConflict();
+    jQuery(document).ready(function() {
       jQuery(".menulink").click(function(){
          goToByScroll('menu');
       });
       jQuery(".calendarlink").click(function(){
          goToByScroll('calendar');
       });
-      
+
+      jQuery.backstretch("bg.jpg");
     });
     function goToByScroll(id) {
       jQuery('html,body').animate({scrollTop: jQuery("#"+id).offset().top - 50},'slow');
     }
   </script>
+  <script src="jquery.backstretch.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
   <header>
@@ -35,8 +38,9 @@
   </header>
   <div id="col1">
     <section id="maintext">
-      <p>&ldquo;Socialising with alcohol is fun and we should not pretend otherwise.&rdquo; &mdash;Suzy Dean
-      <p>A micro club with lots of entertainment and fun. Check out our <span class="calendarlink link">Calendar</span> and <span class="menulink link">Menu</span>.</p>
+      <p>A Micro Club @ <a href="http://www.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=blackbird+buvette&sll=37.857507,-95.712891&sspn=36.647398,83.583984&ie=UTF8&ll=35.097018,-106.653214&spn=0.07823,0.16325&z=13&iwloc=A">509 Central
+        NW</a>. Check out our <span class="calendarlink link">Calendar</span> and <span class="menulink link">Menu</span>.</p>
+      <p style="margin-top: 2em;">&ldquo;Socializing with alcohol is fun and we should not pretend otherwise.&rdquo; &mdash;Suzy Dean
     </section>
     <section id="calendar">
       <script type="text/javascript" src="http://holdmyticket.com/feeds/feed2.php?apikey=icop23yi1xx7eupx90&venues=122&tplFile=hardrock"></script>

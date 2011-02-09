@@ -18,9 +18,12 @@ $lightbrown: #f3f3f3;
 
 html, body {
     font-family: 'Molengo', 'Gill Sans', Helvetica, serif;
-    background: $lightbrown url('bg.gif');
     color: $black;
     height: 100%;
+}
+
+body {
+    background: $lightbrown;
 }
 
 p {
@@ -139,9 +142,10 @@ iframe {
 .event_wrap {
     border-top: 1px solid $brown;
     padding: 10px;
+    clear: both;
     
     .date_l, .date_r {
-        margin-right: 5px;
+        margin: 0px 5px 10px 0px;
         background: $lightbrown;
         padding: 5px;
         width: 45px;
@@ -162,6 +166,11 @@ iframe {
     
     .eventPageBtn {
         font-size: .8em;
+        display: none;
+    }
+    
+    .fblike {
+        clear: both;
     }
 }
 .event_wrap:first-child {
